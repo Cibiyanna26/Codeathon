@@ -1,0 +1,188 @@
+.partner-section{
+    min-height: 60vh;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sponsors-section{
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+}
+.sp-heading{
+    font-size: 10%;
+}
+.sponsors{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 60px auto;
+}
+#gsp {
+    margin: 0 auto;
+}
+
+h4{
+    font-size: 1.4em;
+}
+.sponsorsImages{
+    width: 17%;
+    margin-left:6vmin;
+    height: 15%;
+    border-radius: 15px;
+    /* animation: bounce 1s infinite; */
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+#gsp {
+          height: 20% !important;
+    }
+#bee{
+    width:25%;
+    height: 13%;
+}
+#dev{
+    width: 20%;
+}
+#axure{
+    height: 8%;
+    width: 15%;
+}
+#rosen{
+    width: 30%;
+}
+#echo3d{
+    width: 20%;
+    height: 18%;
+    margin-right: 5vmin;
+}
+#alpha{
+    height: 34%;
+    width: 28%;
+    margin-right: 4vmin;
+}
+#xyz{
+    height: 10%;
+    width: 13%;
+    margin-right: 5vmin;
+}
+#certi{
+    width: 29%;
+    height: 13%;
+}
+#replit{
+    height: 10%;
+}
+#buddy{
+    width: 23%;
+}
+#cake{
+    width: 25%;
+}
+#polygon{ 
+    height: 19%;
+    width: 19%;
+}
+@media screen and (max-width: 900px) {
+    .sponsors{
+        max-height: 90vh;
+        width: 100%;
+        margin: 18% auto;
+        row-gap: 4%;
+    }
+    #gsp{
+        height: 50%;
+    }
+    .partner-section{
+        margin-bottom: 60px;
+    }
+        .sponsorsImages{
+            width: 30%;
+        
+            /* height: 20% !important; */
+        }
+    
+        #bee {
+            width: 45%;
+            height: 13%;
+        }
+    
+        #dev {
+            width: 30%;
+            height: 40%;
+        }
+    
+        #axure {
+            height: 6%;
+            width: 32%;
+            margin-top: 16vmin;
+        }
+    
+        #echo3d {
+            width: 33%;
+            margin-top: 25px;
+        }
+    
+        #alpha {
+            height: 34%;
+            width: 50%;
+            margin: 0;
+        }
+    
+        #xyz {
+            height: 8%;
+            width: 25%;
+             margin-top:16vmin;
+        }
+    
+        #certi {
+            width: 59%;
+            height: 13%;
+        }
+    
+        #replit {
+            height: 15%;
+            width: 40%;
+            margin-top: 30px;
+        }
+    
+        #buddy {
+            width: 37%;
+        }
+    
+        #cake {
+            width: 40%;
+        }
+    
+        #polygon {
+            height: 29%;
+            width: 37%;
+        }
+        #rosen{
+                width: 60%;
+             margin-top: 16vmin;
+        }
+}

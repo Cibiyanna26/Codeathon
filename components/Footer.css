@@ -1,0 +1,41 @@
+.social-btn img:hover{
+    height:3vmin;
+    width:3vmin;
+}
+#gmail{
+    text-decoration: underline;
+    font-weight: bold;
+    /* font-size:3vmin; */
+    color: white;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .flex-wrap {
+      flex-direction: column; 
+    }
+  
+    .social-btn {
+      margin-top: 10px; 
+      
+    }
+    .fix-class{
+        flex-direction: row;
+    }
+    .resp{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin: 0 auto;
+        width: 98%;
+    }
+    .contact{
+        /* font-size:110%; */
+        /* margin-left:75px; */
+        margin-top:10px;
+        margin-bottom:10px;
+        flex-direction: column;
+    }
+  }
+  

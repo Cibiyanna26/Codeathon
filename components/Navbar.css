@@ -1,0 +1,187 @@
+.NavBar-desc{
+    display: flex;
+    width:32%;
+    justify-content: space;
+    color:aliceblue;
+    gap: 1.1em;
+    align-items: center; 
+    animation: slideLeft 0.80s ease-out;
+}
+@keyframes slideLeft {
+    from {
+        transform: translate(100%, 0);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+
+}
+
+.navParts{
+    cursor: pointer;
+}
+
+.heading{
+    margin-left: 30px;
+    min-width: 40vw;
+    font-size: 1.7em;
+    animation: slideRight 0.95s ease-out;
+}
+
+@keyframes slideRight {
+    from{
+        transform: translate(-100%, 0);
+    }
+    to{
+        trnasform: translate(0, 0);
+    }
+    
+}
+
+.menuButton{
+    width: 2.5em;
+    display: none;
+    margin: 10px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 13vmin;
+    font-size:2.5vmin;
+    width: 100vw;
+    background-color: #00000094;
+    color:aliceblue;
+    position:fixed;
+    padding: 0 0px;
+    overflow: hidden;
+    font-weight: bold;
+    z-index:1000;
+    animation: fall 0.65s ease-out;
+}
+@keyframes fall {
+    from{
+        transform: translate(0, -100%);
+    }
+    to{
+        trnasform: translate(0, 0);
+    }
+    
+}
+.devfolio{
+    width: 15vmin;
+    height: 8vmin;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* padding: 4px; */
+    font-weight: bold;
+    font-size:2.3vmin;
+    background-color: rgb(57, 112, 250);
+    border-radius: 6vmin;
+    border:0.1em solid rgb(7, 10, 48);
+}
+@media (max-width: 850px) {
+    .NavBar-desc {
+        margin-left: 2%;
+        display: none;
+    }
+    .devfolio{
+        height:8vmin;
+        font-size:2.2vmin;
+        width: 15vmin;
+    }
+    .heading{
+        margin-left:10px;
+    }
+    .menuButton {
+        display: block;
+    }
+
+    .NavBar-description br{
+        line-height:10px;
+    }
+    .NavBar-description {
+        position: fixed;
+        height: 100vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 200;
+        width: 60vmin;
+        top: 0px;
+        right: 0px;
+        box-shadow: -3px 0px 9px rgb(185, 185, 185);
+        border-radius: 14px 0 0 14px;
+        padding-top: 2%;
+        color: aliceblue;
+        background-image: linear-gradient(to right, #434343 0%, rgb(29, 29, 29) 100%);
+        z-index: 9999;
+        font-size: 1.9em;
+        line-height: 3em;
+        animation: slideLeft 0.95s ease-in-out;
+    }
+
+    @keyframes grow {
+        from {
+            transform: translate(100%, 100%);
+        }
+        
+        to {
+            transform: translate(-50%, 0%);
+        }
+    }
+    
+    .navParts {
+        margin-left: 0px;
+    }
+    .crossImg {
+        width: 29px;
+        height: 29px;
+        top: 15px;
+        right: 20px;
+        position: absolute;
+    }
+
+    .devfolio-btn {
+        width: 25vmin;
+        height: 9vmin;
+        margin: 18px 14px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 3vmin;
+        background-color: rgb(57, 112, 250);
+        border-radius: 6vmin;
+        border: 0.1em solid rgb(7, 10, 48);
+    }
+  }
+
+@media (max-width: 1100px) {
+    .nav {
+        font-size:2.2vmin;
+        padding-left: 0px;
+    }
+    .NavBar-desc{
+        width:75%;
+        margin-left:4%;
+    }
+    .devfolio{
+        height:8vmin;
+        font-size:2.2vmin;
+        width: 15vmin;
+    }
+    .heading{
+        margin-left:10px;
+        font-size: 2.7em;
+    }
+    .NavBar-description {
+        padding-left: 20px;
+    }
+  }
