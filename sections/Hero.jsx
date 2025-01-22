@@ -1,85 +1,128 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import './hero.css';
+import { useEffect, useState } from 'react';
 
-import { useEffect } from 'react';
-import styles from '../styles';
+// Assuming you have motion utility functions (slideIn, staggerContainer, textVariant)
 import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 
 function Hero() {
+  const [isImageVisible, setImageVisible] = useState(true);
+
   useEffect(() => {
+    // Adding script dynamically to the DOM
     const script = document.createElement('script');
     script.src = 'https://apply.devfolio.co/v2/sdk.js';
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
     return () => {
-      document.body.removeChild(script);
+      document.body.removeChild(script); // Cleanup on component unmount
     };
   }, []);
 
   return (
-    <section className={`${styles.yPaddings} flex justify-center`} id="home">
+    <section style={{ padding: '50px 0', display: 'flex', justifyContent: 'center' }} id="home">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col`}
+        style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       >
-        <div
-          className="flex justify-center items-center flex-col  z-10 lg:mt-[70px] mt-[70px]"
-          id="heroPage"
-        >
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', zIndex: 10, marginTop: '70px' }} id="heroPage">
           <motion.h1
             variants={textVariant(1.1)}
-            className={styles.heroHeading}
+            style={{
+              fontSize: '2.5rem', // Adjust text size
+              fontWeight: 'bold',
+              textAlign: 'center',
+              color: 'white', // Change text color to white
+              marginBottom: '20px',
+            }}
             id="head"
           >
-            The Incognito
+            Innovation | Sustainability | Impact
           </motion.h1>
-          <motion.div
-            variants={textVariant(1.1)}
-            className="flex flex-row justify-center items-center"
-          >
-            <h1 className={styles.heroHeading}>Realm</h1>
-            {/* <div className={styles.heroDText} />
-          <h1 className={styles.heroHeading}>Ness</h1> */}
-          </motion.div>
         </div>
 
-        <div className="frontPageBtn">
-          <div
-            className="apply-button"
-            data-hackathon-slug="hackstreet24"
-            data-button-theme="light"
-            style={{ height: '44px', width: '312px' }}
-          />
-
-          <button className="Btn font-normal" type="button">
-            <a href="https://discord.com/invite/zKFdRQ4z9D">Discord</a>
-          </button>
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          {/* Discord Button, visibility controlled */}
+          <motion.button
+            className="Btn font-normal"
+            type="button"
+            style={{
+              backgroundColor: '#4CAF50',
+              padding: '12px 24px',
+              color: 'white',
+              borderRadius: '4px',
+              border: 'none',
+              cursor: 'pointer',
+              marginTop: '20px',
+              opacity: isImageVisible ? 1 : 0, // Hide button when the image slides
+              pointerEvents: isImageVisible ? 'auto' : 'none', // Disable button interaction when hidden
+              transition: 'opacity 0.3s ease', // Smooth transition
+            }}
+          >
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSchw2TJX7HNnYJlGXx13jlzk9KjDT6NBYXz1gL0PMcQDjBy8g/viewform" style={{ textDecoration: 'none', color: 'white' }}>
+              Apply
+            </a>
+          </motion.button>
         </div>
 
         <motion.div
           variants={slideIn('right', 'tween', 0.1, 1.5)}
-          className="relative w-full md:-mt-[-70px] -mt-[-20px]"
+          style={{
+            position: 'relative',
+            width: '100%',
+            marginTop: '30px', // Added margin to separate button and image
+            onAnimationStart: () => setImageVisible(false), // Hide button when sliding starts
+            onAnimationComplete: () => setImageVisible(true), // Show button when sliding ends
+          }}
         >
-          <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" />
+          <div style={{
+            position: 'absolute',
+            width: '100%',
+            height: '300px',
+            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)',
+            borderTopLeftRadius: '140px',
+            zIndex: 0,
+            top: '-30px'
+          }} />
           <img
             src="/gif3.gif"
             alt="cover"
-            className="w-full sm:h-[500px] h-[500px] lg:h-[500px] object-cover rounded-tl-[140px] z-10 relative"
+            style={{
+              width: '100%',
+              height: '500px',
+              objectFit: 'cover',
+              borderTopLeftRadius: '140px',
+              position: 'relative',
+              zIndex: 10,
+            }}
           />
 
           <a href="#explore">
-            <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] lg:-mt-[50px] pr-[40px] relative z-[10]">
-              <img
+            <div
+              style={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'flex-end',
+                marginTop: '-50px',
+                paddingRight: '40px',
+                position: 'relative',
+                zIndex: 10,
+              }}
+            >
+              {/* <img
                 src="/logo_hack.png"
                 alt="stamp"
-                className="sm:w-[155px] lg:w-[100px] w-[100px] sm:h-[155px] lg:h-[100px] h-[100px] object-contain"
-              />
+                style={{
+                  width: '100px',
+                  height: '100px',
+                  objectFit: 'contain',
+                }}
+              /> */}
             </div>
           </a>
         </motion.div>

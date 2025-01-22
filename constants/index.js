@@ -39,19 +39,19 @@ export const newFeatures2 = [
     imgUrl: '/trophy.svg',
     title: 'WINNER',
     subtitle:
-        'Prize will be given to a project that outstands all other submissions.',
+        'A cash prize of ₹20,000, along with a trophy and certificates, will be awarded to the best project that outshines all other submissions.',
   },
   {
     imgUrl: '/trophy.svg',
     title: '1st RUNNER UP',
     subtitle:
-        '1st Runner-up prize will be given to the second best project of the hackathon.',
+        'The second-best project will receive a cash prize of ₹15,000, along with a trophy and certificates.',
   },
   {
     imgUrl: '/trophy.svg',
     title: '2nd RUNNER UP',
     subtitle:
-        '2nd Runner-up project of the hackathon will win some awesome prizes.',
+        'The third-best project will win a cash prize of ₹10,000, along with a trophy and certificate',
   },
   // {
   //   imgUrl: '/headset.svg',
@@ -64,54 +64,45 @@ export const newFeatures2 = [
 export const insights = [
   {
     imgUrl: '/image32.jpeg',
-    title: ' Who can attend?',
-    subtitle: 'Hackstreet is open to students of all colleges.',
+    title: ' Can our team change members after registration?',
+    subtitle: 'No, team members or the team leader cannot be changed after registration. Once registered, the team composition must remain the same.',
   },
   {
     imgUrl: '/image30.jpeg',
-    title: ' I am a first time hacker, what should I do?',
+    title: ' Is there a specific format for the Idea Submission?',
     subtitle:
-      '  No worries, we love to welcome first time hackers and start their hacking journey from a hackathon. We have some awesome workshops and events which will help you get started with hackathon and hacking in general.',
-  },
+    'Yes, the idea must be submitted in a PowerPoint presentation (PPT) with a maximum of 7 slides. You can download the PPT template from the website'  },
   {
     imgUrl: '/image36.jpeg',
-    title: ' How team formation works?',
+    title: ' Are there any costs involved for Phase III (Final Hackathon)?',
     subtitle:
-      "You can form a team with 2-4 members. If you don't have a team, there'll be plenty of opportunities for you to meet new hackers and form a team!",
+      "Yes, if your team is shortlisted for the Grand Finale (Phase III), each participant will be required to pay a registration fee of ₹300. This fee covers food during the event.",
   },
   {
     imgUrl: '/image34.jpeg',
-    title: '   How to register myself in the hackathon??',
+    title: ' What are the key evaluation criteria for the idea submission?',
     subtitle:
       'All you need is to fill your details above by just clicking on the Devfolio button and also join Discord, we will guide you through everything there',
   },
   {
     imgUrl: '/image31.jpeg',
-    title: '   I have more questions?',
+    title: ' What if we face technical issues during the online presentations?',
     subtitle:
-      '    Reach us directly on our Discord Server we would be happy to help you.',
+      'The evaluation will focus on the originality of the idea, its alignment with SDGs, technical complexity, feasibility, and potential for meaningful impact. Additionally, user experience and future development opportunities will be considered',
   },
 ];
 
 export const socials = [
-  {
-    name: 'telegram',
-    url: '/discord.svg',
-    href: 'https://discord.gg/zKFdRQ4z9D',
-  },
+  
   {
     name: 'linkedin',
     url: '/linkedin.svg',
-    href: 'https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFx5DDyMtDHlwAAAYzdvY-IdZOXMNqamWkeKzZQdyYytS5v4rnk6NUb7efZRQdNWS1-zOQS7SQ0ifW0sKyRTagpY_ksTcJ9QwPZDXBAz-WuBhgRWZ-UZbdl_DXBh6kcbYZjf40=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fieee-student-branch-jiit',
+    href: 'https://www.linkedin.com/company/gdg-on-campus-sece/posts/?feedView=all',
   },
   {
     name: 'instagram',
     url: '/instagram.svg',
-    href: 'https://www.instagram.com/ieeesbjiit/',
+    href: 'https://www.instagram.com/gdg_sece/',
   },
-  {
-    name: 'facebook',
-    url: '/facebook.svg',
-    href: 'https://www.facebook.com/ieeesbjiit/',
-  },
+  
 ];
