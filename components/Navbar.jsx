@@ -17,7 +17,7 @@ function Navbar() {
     <div className="nav">
       <div className="heading">
         <h2>
-          <Link className="navParts" to="home">HACKSTREET 2.0</Link>
+          <Link className="navParts" to="home">CODEATHON</Link>
         </h2>
       </div>
       <div className="NavBar-desc">
