@@ -1,55 +1,76 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import React from 'react';
+import { TitleText } from '../components';
 import styles from '../styles';
-import { fadeIn } from '../utils/motion';
 
-function ExploreCard({ id, imgUrl, title, index, active, handleClick }) {
+// Correct Image Paths
+const themes = [
+  { id: 1, title: "No Poverty", img: "/Goal-1.jpg" },
+  { id: 2, title: "Zero Hunger", img: "/goal2.png" },
+  { id: 3, title: "Good Health and Well-being", img: "/goal3.png" },
+  { id: 4, title: "Quality Education", img: "/goal4.png" },
+  { id: 5, title: "Gender Equality", img: "/goal5.png" },
+  { id: 6, title: "Clean Water and Sanitation", img: "/goal6.png" },
+  { id: 7, title: "Affordable and Clean Energy", img: "/goal7.png" },
+  { id: 8, title: "Decent Work and Economic Growth", img: "/goal8.png" },
+  { id: 9, title: "Industry, Innovation and Infrastructure", img: "/goal9.png" },
+  { id: 10, title: "Reduced Inequality", img: "/goal10.png" },
+  { id: 11, title: "Sustainable Cities and Communities", img: "/goal11.png" },
+  { id: 12, title: "Responsible Consumption and Production", img: "/goal12.png" },
+  { id: 13, title: "Climate Action", img: "/goal_13.png" },
+  { id: 14, title: "Life Below Water", img: "/goal14.png" },
+  { id: 15, title: "Life on Land", img: "/goal15.png" },
+  { id: 16, title: "Peace and Justice Strong Institutions", img: "/goal16.png" },
+  { id: 17, title: "Partnerships to achieve the Goal", img: "/goal17.png" },
+];
+
+function Explore() {
   return (
-    <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className={`relative ${
-        active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex[0.5] flex-[2]'
-      } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
-      onHoverStart={() => handleClick(id)}
-      onClick={() => handleClick(id)}
-    >
-      <img
-        src={imgUrl}
-        alt={title}
-        className="absolute w-full h-full object-cover rounded-[24px]"
-      />
-      {active !== id ? (
-        <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
-          {title.split(' ').map((word, index) => (
-            <React.Fragment key={index}>
-              {word}
-              {index < title.split(' ').length - 1 && <br />}
-            </React.Fragment>
-          ))}
-        </h3>
-      ) : (
-        <div className="absolute bottom-0 p-8 justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
-          <div
-            className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
+    <section className={`${styles.paddings} py-8`} id="explore">
+      <motion.div
+        className="overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <TitleText title={<>🗡 THEMES 🗡</>} textStyles="text-center mb-4" />
+
+        <div className="relative mt-6">
+          <motion.div
+            className="flex space-x-6 cursor-grab overflow-x-auto scrollbar-hide"
+            drag="x"
+            dragConstraints={{ left: -1500, right: 0 }}
+            animate={{ x: [0, -1500, 0] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "mirror",
+              duration: 25,
+              ease: "linear",
+            }}
           >
-            <img
-              src="/headset.svg"
-              alt="headset"
-              className="w-1/2 h-1/2 object-contain"
-            />
-          </div>
-          <p className="font-normal text-[16px] leading-[20px] text-white uppercase">
-            Enter the Hackstreet 2.0
-          </p>
-          <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
-            {title}
-          </h2>
+            {themes.map((theme) => (
+              <motion.div
+                key={theme.id}
+                className="min-w-[300px] h-[380px] bg-gray-800 text-white rounded-lg flex flex-col items-center justify-center text-xl font-bold p-6 shadow-lg"
+                whileHover={{ scale: 1.1 }}
+              >
+                {/* Use Next.js Image Component */}
+                <img
+                  src={theme.img}
+                  alt={theme.title}
+                  width={140}
+                  height={140}
+                  className="object-cover rounded-lg"
+                />
+                <p className="mt-3 text-center text-white">{theme.title}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      )}
-    </motion.div>
+      </motion.div>
+    </section>
   );
 }
 
-export default ExploreCard;
+export default Explore;

@@ -1,53 +1,47 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { InsightCard, TitleText, TypingText } from '../components';
-
-
+import { TitleText } from '../components';
 import styles from '../styles';
 import { fadeIn, staggerContainer } from '../utils/motion';
 
 function About() {
   return (
-    <section className={`${styles.paddings} relative z-10`} id="about">
-      <div className="gradient-02 z-0" />
+    <section className="py-24 relative z-10 px-6 sm:px-12" id="about">
+      <div className="gradient-02 absolute inset-0 z-0" />
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
+        className="max-w-5xl w-full mx-auto flex flex-col items-center text-center relative z-10"
       >
-        <TitleText title="About HackStreet 2.0" textStyles="text-center" className="my-5" />
+        <TitleText title="Sri Eshwar Thiran Codeathon" textStyles="text-center" className="mb-6" />
 
         <motion.p
           variants={fadeIn('up', 'tween', 0.2, 1)}
-          className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
+          className="mt-4 font-normal sm:text-[28px] text-[18px] text-secondary-white"
         >
-          <span className="font-extrabold text-white">HackStreet</span> is a 24 hour
-          long running hackathon, being held on{' '}
-          <span className="font-extrabold text-white">3rd and 4th of February.</span>{' '}
-           We call for{' '}
-          <span className="font-extrabold text-white">
-            hackers, artists, coders, designers, tech evangelists, creatives, and
-            developers
-          </span>{' '}
-          from all disciplines to take part to{' '}
-          <span className="font-extrabold text-white">win awesome prizes </span>
-          and collaborate with other developers and gain immersive experiences. Throughout the weekend hackers
-          at Hackstreet will have{' '}
-          <span className="font-extrabold text-white">
-            unique opportunities to learn 
-          </span>{' '}
-          from each other. We are determined to
-          have an all-inclusive and diverse group of students joining us for the hackathon.
+          <span className="font-extrabold text-white">Sri Eshwar Thiran Codeathon</span> is a multi-phase hackathon culminating in the Grand Finale on{' '}
+          <span className="font-extrabold text-white">February 20, 2025</span>. We call for{' '}
+          <span className="font-extrabold text-white">coders, designers, innovators, and problem-solvers</span> from all disciplines to participate, tackle real-world challenges, and{' '}
+          <span className="font-extrabold text-white">win exciting prizes</span>.
+        </motion.p>
+
+        <motion.p
+          variants={fadeIn('up', 'tween', 0.3, 1)}
+          className="mt-10 font-normal sm:text-[24px] text-[16px] text-secondary-white"
+        >
+          Participants will have opportunities to collaborate with peers, gain insights from industry experts, and present impactful solutions aligned with the{' '}
+          <span className="font-extrabold text-white">United Nations' Sustainable Development Goals (SDGs)</span>. We are committed to fostering an inclusive and diverse environment, ensuring a transformative experience for all students joining us for the{' '}
+          <span className="font-extrabold text-white">Codeathon</span>.
         </motion.p>
 
         <motion.img
           variants={fadeIn('up', 'tween', 0.3, 1)}
           src="/arrow-down.svg"
           alt="arrow down"
-          className="w-[18px] h-[28px] object-contain mt-[28px]"
+          className="w-[20px] h-[32px] object-contain mt-8"
         />
       </motion.div>
     </section>
