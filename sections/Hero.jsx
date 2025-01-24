@@ -2,8 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
-// Assuming you have motion utility functions (slideIn, staggerContainer, textVariant)
 import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 
 function Hero() {
@@ -22,15 +20,38 @@ function Hero() {
   }, []);
 
   return (
-    <section style={{ padding: '50px 0', display: 'flex', justifyContent: 'center' }} id="home">
+    <section
+      style={{
+        padding: '50px 0',
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+      id="home"
+    >
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+        style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
       >
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', zIndex: 10, marginTop: '70px' }} id="heroPage">
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            zIndex: 10,
+            marginTop: '70px',
+          }}
+          id="heroPage"
+        >
           <motion.h1
             variants={textVariant(1.1)}
             style={{
@@ -46,8 +67,18 @@ function Hero() {
           </motion.h1>
         </div>
 
-        <div style={{ textAlign: 'center', marginTop: '20px' }}>
-          {/* Discord Button, visibility controlled */}
+        {/* Buttons Section */}
+        <div
+          style={{
+            textAlign: 'center',
+            marginTop: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '30px', // Space between buttons
+          }}
+        >
+          {/* Apply Button */}
           <motion.button
             className="Btn font-normal"
             type="button"
@@ -58,37 +89,68 @@ function Hero() {
               borderRadius: '4px',
               border: 'none',
               cursor: 'pointer',
-              marginTop: '20px',
-              opacity: isImageVisible ? 1 : 0, // Hide button when the image slides
-              pointerEvents: isImageVisible ? 'auto' : 'none', // Disable button interaction when hidden
-              transition: 'opacity 0.3s ease', // Smooth transition
+              opacity: isImageVisible ? 1 : 0,
+              pointerEvents: isImageVisible ? 'auto' : 'none',
+              transition: 'opacity 0.3s ease',
             }}
           >
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSchw2TJX7HNnYJlGXx13jlzk9KjDT6NBYXz1gL0PMcQDjBy8g/viewform" style={{ textDecoration: 'none', color: 'white' }}>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSchw2TJX7HNnYJlGXx13jlzk9KjDT6NBYXz1gL0PMcQDjBy8g/viewform"
+              style={{ textDecoration: 'none', color: 'white' }}
+            >
               Apply
+            </a>
+          </motion.button>
+
+          {/* Download Button */}
+          <motion.button
+            className="Btn font-normal"
+            type="button"
+            style={{
+              backgroundColor: '#008CBA',
+              padding: '12px 24px',
+              color: 'white',
+              borderRadius: '4px',
+              border: 'none',
+              cursor: 'pointer',
+              opacity: isImageVisible ? 1 : 0,
+              pointerEvents: isImageVisible ? 'auto' : 'none',
+              transition: 'opacity 0.3s ease',
+            }}
+          >
+            <a
+              href="/Template.pptx"
+              download
+              style={{ textDecoration: 'none', color: 'white' }}
+            >
+              Download PPT Template
             </a>
           </motion.button>
         </div>
 
+        {/* Image Section */}
         <motion.div
           variants={slideIn('right', 'tween', 0.1, 1.5)}
           style={{
             position: 'relative',
             width: '100%',
-            marginTop: '30px', // Added margin to separate button and image
-            onAnimationStart: () => setImageVisible(false), // Hide button when sliding starts
-            onAnimationComplete: () => setImageVisible(true), // Show button when sliding ends
+            marginTop: '30px',
+            onAnimationStart: () => setImageVisible(false), // Hide buttons when sliding starts
+            onAnimationComplete: () => setImageVisible(true), // Show buttons when sliding ends
           }}
         >
-          <div style={{
-            position: 'absolute',
-            width: '100%',
-            height: '300px',
-            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)',
-            borderTopLeftRadius: '140px',
-            zIndex: 0,
-            top: '-30px'
-          }} />
+          <div
+            style={{
+              position: 'absolute',
+              width: '100%',
+              height: '300px',
+              background:
+                'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)',
+              borderTopLeftRadius: '140px',
+              zIndex: 0,
+              top: '-30px',
+            }}
+          />
           <img
             src="/gif3.gif"
             alt="cover"
@@ -114,15 +176,7 @@ function Hero() {
                 zIndex: 10,
               }}
             >
-              {/* <img
-                src="/logo_hack.png"
-                alt="stamp"
-                style={{
-                  width: '100px',
-                  height: '100px',
-                  objectFit: 'contain',
-                }}
-              /> */}
+              {/* Optional Logo Placement */}
             </div>
           </a>
         </motion.div>

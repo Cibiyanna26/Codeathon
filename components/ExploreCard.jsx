@@ -17,7 +17,7 @@ const themes = [
   { id: 9, title: "Industry, Innovation and Infrastructure", img: "/goal9.png" },
   { id: 10, title: "Reduced Inequality", img: "/goal10.png" },
   { id: 11, title: "Sustainable Cities and Communities", img: "/goal11.png" },
-  { id: 12, title: "Responsible Consumption and Production", img: "/goal12.png" },
+  { id: 12, title: "Responsible Consumption and Production", img: "/goal12.jpg" },
   { id: 13, title: "Climate Action", img: "/goal_13.png" },
   { id: 14, title: "Life Below Water", img: "/goal14.png" },
   { id: 15, title: "Life on Land", img: "/goal15.png" },
@@ -34,36 +34,39 @@ function Explore() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <TitleText title={<>🗡 THEMES 🗡</>} textStyles="text-center mb-4" />
+        {/* <TitleText title={<>🗡 THEMES 🗡</>} textStyles="text-center mb-4" /> */}
 
         <div className="relative mt-6">
           <motion.div
             className="flex space-x-6 cursor-grab overflow-x-auto scrollbar-hide"
             drag="x"
-            dragConstraints={{ left: -1500, right: 0 }}
-            animate={{ x: [0, -1500, 0] }}
+            dragConstraints={{
+              left: -2600, // Adjusted for 17 items
+              right: 0,
+            }}
+            animate={{ x: [0, -2600, 0] }}
             transition={{
               repeat: Infinity,
               repeatType: "mirror",
-              duration: 25,
+              duration: 50, // Keeps the animation duration slow
               ease: "linear",
             }}
           >
             {themes.map((theme) => (
               <motion.div
                 key={theme.id}
-                className="min-w-[300px] h-[380px] bg-gray-800 text-white rounded-lg flex flex-col items-center justify-center text-xl font-bold p-6 shadow-lg"
+                className="min-w-[200px] h-[250px] bg-gray-800 text-white rounded-lg flex flex-col items-center justify-center text-lg font-bold p-4 shadow-lg"
                 whileHover={{ scale: 1.1 }}
               >
                 {/* Use Next.js Image Component */}
                 <img
                   src={theme.img}
                   alt={theme.title}
-                  width={140}
-                  height={140}
+                  width={100} // Reduced width
+                  height={100} // Reduced height
                   className="object-cover rounded-lg"
                 />
-                <p className="mt-3 text-center text-white">{theme.title}</p>
+                <p className="mt-2 text-center text-white">{theme.title}</p>
               </motion.div>
             ))}
           </motion.div>
