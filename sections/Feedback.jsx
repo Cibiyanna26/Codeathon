@@ -20,11 +20,11 @@ function Feedback() {
             In-Kind Partners
           </h4> */}
           <div className="sponsors inkind-sp">
-            <img className="sponsorsImages" id="alpha" src="\WolframAlphaImg.png" alt="WOLFRAM ALPHA LOGO" />
+            {/* <img className="sponsorsImages" id="alpha" src="\WolframAlphaImg.png" alt="WOLFRAM ALPHA LOGO" />
             <img className="sponsorsImages" id="echo3d" src="\echo3DImg.png" alt="ECHO 3D LOGO" />
             <img className="sponsorsImages" id="xyz" src="\xyzImg.png" alt="XYZ LOGO" />
             <img className="sponsorsImages" id="axure" src="\axureImg.svg" alt="AXURE LOGO" />
-            <img className="sponsorsImages" id="rosen" src="\rosenfeldImg.png" alt="ROSENFELD LOGO" />
+            <img className="sponsorsImages" id="rosen" src="\rosenfeldImg.png" alt="ROSENFELD LOGO" /> */}
           </div>
         </div>
       </div>

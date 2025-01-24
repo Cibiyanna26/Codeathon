@@ -15,10 +15,10 @@ function RootLayout({ children }) {
         />
         <meta
           name="keywords"
-          content="Hackathon, Hackstreet, Hackstreet 2.0, Hackers"
+          content="Hackathon, Hackstreet, Codeathon, Hackers"
         />
         <link rel="icon" href="/hackstreetlogo.ico" />
-        <title>Hackstreet 2.0</title>
+        <title>Codeathon</title>
       </head>
       <body>{children}</body>
     </html>

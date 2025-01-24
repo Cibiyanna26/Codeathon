@@ -4,26 +4,7 @@ export const exploreWorlds = [
     imgUrl: '/edu.jpg',
     title: 'Education',
   },
-  {
-    id: 'Murder-2',
-    imgUrl: '/webimage.jpg',
-    title: 'Web 3.0/Blockchain',
-  },
-  {
-    id: 'murder-3',
-    imgUrl: '/health.jpg',
-    title: 'Healthcare',
-  },
-  {
-    id: 'murder-4',
-    imgUrl: '/envir.jpg',
-    title: 'Environment',
-  },
-  {
-    id: 'Murder-5',
-    imgUrl: '/openin.jpg',
-    title: 'Open Innovation',
-  },
+  
 ];
 
 export const startingFeatures = [

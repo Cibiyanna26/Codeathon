@@ -65,7 +65,7 @@ function WhatsNew() {
           variants={fadeIn('left', 'tween', 0.2, 1)}
           className="flex-[0.75] flex justify-center flex-col"
         >
-          {/* <TitleText title={<>What's new about Hackstreet 2.0?</>} /> */}
+          {/* <TitleText title={<>What's new about Codeathon?</>} /> */}
           <div className="mt-[48px] flex-col flex-wrap justify-evenly gap-[28px]">
             {newFeatures2.map((feature) => (
               <NewFeatures key={feature.title} {...feature} />
