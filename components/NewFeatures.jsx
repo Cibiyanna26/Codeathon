@@ -2,8 +2,8 @@ import styles from '../styles';
 
 function NewFeatures({ imgUrl, title, subtitle }) {
   const formatSubtitle = (text) => {
-    return text.split(/(₹\d+(,?\d{3})*)/g).map((part, index) => {
-      if (/₹\d+(,?\d{3})*/.test(part)) {
+    return text.split(/(₹[\d,]+)/g).map((part, index) => {
+      if (/^₹[\d,]+$/.test(part)) {
         return (
           <span key={index} style={{ color: 'white', fontWeight: 'bold' }}>
             {part}
@@ -13,6 +13,7 @@ function NewFeatures({ imgUrl, title, subtitle }) {
       return part;
     });
   };
+  
 
   return (
     <div className="flex-1 flex flex-col sm:min-w-[210px]">
