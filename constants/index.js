@@ -88,7 +88,7 @@ export const socials = [
   {
     name:'discord',
     url: '/discord.svg',
-    href: ""
+    href: "https://discord.gg/2jsTzrhWut"
   }
   
 ];
