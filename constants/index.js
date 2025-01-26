@@ -20,19 +20,19 @@ export const newFeatures2 = [
     imgUrl: '/trophy.svg',
     title: 'WINNER',
     subtitle:
-        'A cash prize of ₹20,000, along with a trophy and certificates, will be awarded to the best project that outshines all other submissions.',
+        'A cash prize of ₹20,000 , along with a trophy and certificates, will be awarded to the best project that outshines all other submissions.',
   },
   {
     imgUrl: '/trophy.svg',
     title: '1st RUNNER UP',
     subtitle:
-        'The second-best project will receive a cash prize of ₹15,000, along with a trophy and certificates.',
+        'The second-best project will receive a cash prize of ₹15,000 , along with a trophy and certificates.',
   },
   {
     imgUrl: '/trophy.svg',
     title: '2nd RUNNER UP',
     subtitle:
-        'The third-best project will win a cash prize of ₹10,000, along with a trophy and certificate',
+        'The third-best project will win a cash prize of ₹10,000 , along with a trophy and certificate',
   },
   // {
   //   imgUrl: '/headset.svg',
