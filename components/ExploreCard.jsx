@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import styles from '../styles';
-import './explore.css';
+import './Explore.css';
 
 const themes = [
   { id: 1, title: "No Poverty", description: "End poverty in all its forms everywhere." },
