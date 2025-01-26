@@ -52,12 +52,12 @@ export const insights = [
     imgUrl: '/image30.jpeg',
     title: ' Is there a specific format for the Idea Submission?',
     subtitle:
-    'Yes, the idea must be submitted in a PowerPoint presentation (PPT) with a maximum of 7 slides. You can download the PPT template from the website'  },
+    'Yes, the idea must be submitted in a PowerPoint presentation (PPT) with a maximum of 7 slides. You can download the PPT template from the website'  },
   {
     imgUrl: '/image36.jpeg',
     title: ' Are there any costs involved for Phase III (Final Hackathon)?',
     subtitle:
-      "Yes, if your team is shortlisted for the Grand Finale (Phase III), each participant will be required to pay a registration fee of ₹300. This fee covers food during the event.",
+      "Yes, if your team is shortlisted for the Grand Finale (Phase III), each participant will be required to pay a registration fee of ₹300. This fee covers food during the event.",
   },
   {
     imgUrl: '/image34.jpeg',
@@ -69,7 +69,7 @@ export const insights = [
     imgUrl: '/image31.jpeg',
     title: ' What if we face technical issues during the online presentations?',
     subtitle:
-      'The evaluation will focus on the originality of the idea, its alignment with SDGs, technical complexity, feasibility, and potential for meaningful impact. Additionally, user experience and future development opportunities will be considered',
+      'The evaluation will focus on the originality of the idea, its alignment with SDGs, technical complexity, feasibility, and potential for meaningful impact. Additionally, user experience and future development opportunities will be considered',
   },
 ];
 
@@ -85,5 +85,10 @@ export const socials = [
     url: '/instagram.svg',
     href: 'https://www.instagram.com/gdg_sece/',
   },
+  {
+    name:'discord',
+    url: '/discord.svg',
+    href: ""
+  }
   
 ];

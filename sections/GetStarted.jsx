@@ -24,7 +24,7 @@ function GetStarted() {
         variants={fadeIn('down', 'spring', 0.2, 1.5)}
       >
         <div className="timeline">
-          {/* Phase I: Idea Submission */}
+          {/* Timeline Phases */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -34,14 +34,13 @@ function GetStarted() {
               <img src="/stopwatch.jpeg" />
               <div className="text-box">
                 <h2 className="heading1">IDEA SUBMISSION</h2>
-                <small>JANUARY 26, 2025</small>
+                <small>FEBRUARY 1, 2025</small>
                 <p>Registration and Idea Submission Deadline (Online)</p>
                 <span className="left-arrow" />
               </div>
             </div>
           </motion.div>
 
-          {/* Phase II: Prototype Presentation */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -51,14 +50,13 @@ function GetStarted() {
               <img src="/two.jpg" />
               <div className="text-box">
                 <h2 className="heading1">PROTOTYPE PRESENTATION</h2>
-                <small>FEBRUARY 5, 2025</small>
+                <small>FEBRUARY 8, 2025</small>
                 <p>Prototype Presentation and Evaluation via Google Meet</p>
                 <span className="right-arrow" />
               </div>
             </div>
           </motion.div>
 
-          {/* Phase III: Final Hackathon */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -75,7 +73,6 @@ function GetStarted() {
             </div>
           </motion.div>
 
-          {/* Prize Distribution */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -91,6 +88,33 @@ function GetStarted() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Guidelines Section */}
+      <motion.div
+        variants={fadeIn('up', 'spring', 0.5, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="guidelines-section mt-10"
+      >
+        <TitleText title="Guidelines" textStyles="text-center" />
+        <div className="guidelines-content mt-6 text-white max-w-4xl mx-auto p-6 rounded-lg bg-gray-900 shadow-lg">
+          <ul className="list-disc list-inside text-left text-lg leading-8 space-y-4">
+            <li>No registration fee for idea submission.</li>
+            <li>
+              Only the team leader registers the team with a unique name (no institute names).
+            </li>
+            <li>Each team consists of 4–6 members from the same college/university.</li>
+            <li>Participants can join only one team; overlapping teams will be disqualified.</li>
+            <li>All updates will be shared only with the team leader.</li>
+            <li>No changes to team members or leader after registration.</li>
+            <li>Ideas must align with the given themes.</li>
+            <li>
+              Shortlisted teams for the Grand Finale pay ₹300 per participant (covers meals).
+            </li>
+          </ul>
         </div>
       </motion.div>
     </section>
