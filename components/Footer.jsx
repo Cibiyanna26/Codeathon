@@ -37,11 +37,13 @@ function Footer() {
       initial="hidden"
       whileInView="show"
       className={`${styles.paddings} py-8 relative`}
+
     >
       {/* <div className="footer-gradient" /> */}
 
       <div
         className={`${styles.innerWidth} mx-auto flex flex-col gap-8 footerMain`}
+        
       >
        
 
@@ -72,14 +74,21 @@ function Footer() {
                 <FaPhoneAlt />
                 <p className='text-[15px]'>
                 Dr. S. Sampath Kumar, ASP/CSE:{' '}
-                  <a href="tel:+919999453352">+91 88382 94783</a>
+                  <a href="tel:+91 88382 94783">+91 88382 94783</a>
                 </p>
               </div>
               <div className="flex flex-row gap-3 items-center">
                 <FaPhoneAlt />
                 <p className='text-[15px]'>
                 Dr. K. Cholaraja, AP/CSBS{' '}
-                  <a href="tel:+919050892902">+91 75982 90289</a>
+                  <a href="tel:+91 75982 90289">+91 75982 90289</a>
+                </p>
+              </div>
+              <div className="flex flex-row gap-3 items-center">
+                <FaPhoneAlt />
+                <p className='text-[15px]'>
+                Griffin Anushual{' '}
+                  <a href="tel:+919050892902">+91 89033 96562</a>
                 </p>
               </div>
               {/* <div className="flex flex-row gap-3 items-center">

@@ -95,7 +95,7 @@ function Hero() {
             }}
           >
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSchw2TJX7HNnYJlGXx13jlzk9KjDT6NBYXz1gL0PMcQDjBy8g/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSchw2TJX7HNnYJlGXx13jlzk9KjDT6NBYXz1gL0PMcQDjBy8g/viewform"target="_blank"
               style={{ textDecoration: 'none', color: 'white' }}
             >
               Apply
@@ -103,29 +103,7 @@ function Hero() {
           </motion.button>
 
           {/* Download Button */}
-          <motion.button
-            className="Btn font-normal"
-            type="button"
-            style={{
-              backgroundColor: '#008CBA',
-              padding: '12px 24px',
-              color: 'white',
-              borderRadius: '4px',
-              border: 'none',
-              cursor: 'pointer',
-              opacity: isImageVisible ? 1 : 0,
-              pointerEvents: isImageVisible ? 'auto' : 'none',
-              transition: 'opacity 0.3s ease',
-            }}
-          >
-            <a
-              href="/Template.pptx"
-              download
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              Download PPT Template
-            </a>
-          </motion.button>
+          
         </div>
 
         {/* Image Section */}
