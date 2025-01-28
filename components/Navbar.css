@@ -1,187 +1,84 @@
-.NavBar-desc{
-    display: flex;
-    width:32%;
-    justify-content: space;
-    color:aliceblue;
-    gap: 1.1em;
-    align-items: center; 
-    animation: slideLeft 0.80s ease-out;
-}
-@keyframes slideLeft {
-    from {
-        transform: translate(100%, 0);
-    }
-
-    to {
-        transform: translate(0, 0);
-    }
-
+/* General Navbar Styles */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #00000094;
+  color: aliceblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-.navParts{
-    cursor: pointer;
+.navParts {
+  cursor: pointer;
 }
 
-.heading{
-    margin-left: 30px;
-    min-width: 40vw;
-    font-size: 1.7em;
-    animation: slideRight 0.95s ease-out;
+.heading {
+  font-size: 1.7em;
+  font-weight: bold;
 }
 
-@keyframes slideRight {
-    from{
-        transform: translate(-100%, 0);
-    }
-    to{
-        trnasform: translate(0, 0);
-    }
-    
+.devfolio {
+  width: 15vmin;
+  height: 8vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: rgb(57, 112, 250);
+  border-radius: 6vmin;
+  border: 0.1em solid rgb(7, 10, 48);
 }
 
-.menuButton{
-    width: 2.5em;
-    display: none;
-    margin: 10px;
+/* Mobile menu - initially hidden */
+.menuButton {
+  display: none; /* Hidden by default */
 }
 
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 13vmin;
-    font-size:2.5vmin;
-    width: 100vw;
-    background-color: #00000094;
-    color:aliceblue;
-    position:fixed;
-    padding: 0 0px;
-    overflow: hidden;
-    font-weight: bold;
-    z-index:1000;
-    animation: fall 0.65s ease-out;
+.navLinks {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
-@keyframes fall {
-    from{
-        transform: translate(0, -100%);
-    }
-    to{
-        trnasform: translate(0, 0);
-    }
-    
-}
-.devfolio{
-    width: 15vmin;
-    height: 8vmin;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    /* padding: 4px; */
-    font-weight: bold;
-    font-size:2.3vmin;
-    background-color: rgb(57, 112, 250);
-    border-radius: 6vmin;
-    border:0.1em solid rgb(7, 10, 48);
-}
+
 @media (max-width: 850px) {
-    .NavBar-desc {
-        margin-left: 2%;
-        display: none;
-    }
-    .devfolio{
-        height:8vmin;
-        font-size:2.2vmin;
-        width: 15vmin;
-    }
-    .heading{
-        margin-left:10px;
-    }
-    .menuButton {
-        display: block;
-    }
-
-    .NavBar-description br{
-        line-height:10px;
-    }
-    .NavBar-description {
-        position: fixed;
-        height: 100vh;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-weight: 200;
-        width: 60vmin;
-        top: 0px;
-        right: 0px;
-        box-shadow: -3px 0px 9px rgb(185, 185, 185);
-        border-radius: 14px 0 0 14px;
-        padding-top: 2%;
-        color: aliceblue;
-        background-image: linear-gradient(to right, #434343 0%, rgb(29, 29, 29) 100%);
-        z-index: 9999;
-        font-size: 1.9em;
-        line-height: 3em;
-        animation: slideLeft 0.95s ease-in-out;
-    }
-
-    @keyframes grow {
-        from {
-            transform: translate(100%, 100%);
-        }
-        
-        to {
-            transform: translate(-50%, 0%);
-        }
-    }
-    
-    .navParts {
-        margin-left: 0px;
-    }
-    .crossImg {
-        width: 29px;
-        height: 29px;
-        top: 15px;
-        right: 20px;
-        position: absolute;
-    }
-
-    .devfolio-btn {
-        width: 25vmin;
-        height: 9vmin;
-        margin: 18px 14px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 3vmin;
-        background-color: rgb(57, 112, 250);
-        border-radius: 6vmin;
-        border: 0.1em solid rgb(7, 10, 48);
-    }
+  /* For smaller screens, hide nav links and show menu button */
+  .navLinks {
+    display: none;
   }
 
-@media (max-width: 1100px) {
-    .nav {
-        font-size:2.2vmin;
-        padding-left: 0px;
-    }
-    .NavBar-desc{
-        width:75%;
-        margin-left:4%;
-    }
-    .devfolio{
-        height:8vmin;
-        font-size:2.2vmin;
-        width: 15vmin;
-    }
-    .heading{
-        margin-left:10px;
-        font-size: 2.7em;
-    }
-    .NavBar-description {
-        padding-left: 20px;
-    }
+  .menuButton {
+    display: block; /* Show the menu button */
+    background: none;
+    border: none;
+    cursor: pointer;
   }
+
+  .menuButton img {
+    width: 30px; /* Adjust the menu icon size */
+  }
+
+  .NavBar-description {
+    display: none; /* Hide full menu on mobile by default */
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    color: white;
+    width: 60%;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  /* Show mobile menu when the state is true */
+  .NavBar-description.show {
+    display: flex;
+  }
+}
