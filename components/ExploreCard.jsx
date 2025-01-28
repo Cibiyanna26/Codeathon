@@ -27,11 +27,15 @@ const Explore = () => {
     <section>
       <div className="explore-card-grid">
         {themes.map((theme) => (
-          <div className="explore-card" key={theme.id}>
+          <div className="explore-card shadow-md" key={theme.id}>
             <div className="flip-card">
               <div className="flip-card-inner">
                 <div className="flip-card-front">
-                  <img src={theme.img} alt={theme.title} className="explore-img" />
+                  <img
+                    src={theme.img}
+                    alt={theme.title}
+                    className="explore-img"
+                  />
                   <h2>{theme.title}</h2>
                 </div>
                 <div className="flip-card-back">
@@ -42,44 +46,50 @@ const Explore = () => {
           </div>
         ))}
       </div>
-      
-      <button
-        style={{
-          background: "linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%)",
-          padding: "12px 24px",
-          color: "white",
-          border: "2px solid #1BFD9C",
-          borderRadius: "8px",
-          cursor: "pointer",
-          transition: "all 0.3s ease-in-out",
-          marginLeft:"480px",
-          marginTop:"50px",
-          boxShadow: "inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1)",
-        }}
-        onMouseOver={(e) => {
-          e.target.style.transform = "scale(1.05)";
-          e.target.style.boxShadow = "0 0 15px rgba(27, 253, 156, 0.5)";
-        }}
-        onMouseOut={(e) => {
-          e.target.style.transform = "scale(1)";
-          e.target.style.boxShadow = "inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1)";
-        }}
-        onMouseDown={(e) => {
-          e.target.style.transform = "scale(0.95)";
-        }}
-        onMouseUp={(e) => {
-          e.target.style.transform = "scale(1.05)";
-        }}
-      >
+      <div className="flex justify-center">
         <a
           href="https://docs.google.com/document/d/129oaV_B37G0kbu0yiN92aw0R87ZQsg0fts98T6QgUS4/edit?tab=t.0"
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "white" }}
         >
-          Know More About Themes
+          <button
+            style={{
+              background:
+                "linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%)",
+              padding: "12px 24px",
+              color: "white",
+              border: "2px solid #1BFD9C",
+              borderRadius: "8px",
+              cursor: "pointer",
+              transition: "all 0.3s ease-in-out",
+              // marginLeft:"480px",
+              // marginTop:"50px",
+              boxShadow:
+                "inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1)",
+            }}
+            className="flex items-center"
+            onMouseOver={(e) => {
+              e.target.style.transform = "scale(1.05)";
+              e.target.style.boxShadow = "0 0 15px rgba(27, 253, 156, 0.5)";
+            }}
+            onMouseOut={(e) => {
+              e.target.style.transform = "scale(1)";
+              e.target.style.boxShadow =
+                "inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1)";
+            }}
+            onMouseDown={(e) => {
+              e.target.style.transform = "scale(0.95)";
+            }}
+            onMouseUp={(e) => {
+              e.target.style.transform = "scale(1.05)";
+            }}
+          >
+            Know More About Themes
+          </button>
         </a>
-      </button>    </section>
+      </div>
+    </section>
   );
 };
 
