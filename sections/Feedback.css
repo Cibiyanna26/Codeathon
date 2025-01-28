@@ -1,34 +1,112 @@
+/* General Section Styling */
+.partner-section {
+  padding: 40px 20px;
+}
+
+.partner-heading {
+  font-size: 2.0rem; /* Decreased title size */
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Organizer Section */
+.organizer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  text-align: center;
+  min-height: 150px;
+}
+
+.organizer-text {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Sponsor Section */
 .sponsor-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    margin-top: 20px; /* Add margin-top to create spacing */
-    text-align: center; /* Ensure text inside is centered */
-    min-height: 150px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+  min-height: 150px;
+}
+
+.sponsorsImages {
+  max-width: 150px; /* Increased image size */
+  width: 150px;
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 20px;
+}
+
+.sponsor-text {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+}
+
+.sponsor-location {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  margin-top: 5px;
+  padding: 5px 0;
+  margin-top: 10px !important;
+}
+
+.on-campus {
+  color: rgb(78, 78, 250); /* Blue color for "On Campus" */
+}
+
+/* Community Partners Section */
+.community-partners-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 150px;
+}
+
+.community-partners-image {
+  width: 200px; /* Increased image size */
+  height: 200px;
+  object-fit: contain;
+}
+
+.community-partner-text {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+}
+
+/* Optional for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sponsorsImages, .community-partners-image {
+    max-width: 180px;
   }
-  
-  .sponsorsImages {
-    max-width: 150px; /* Reduce the size of the image */
-    width: 100%; /* Ensure it scales well on different screen sizes */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 auto 10px; /* Center the image and add space between image and text */
-    display: block; /* Ensure the image is treated as a block-level element for centering */
-    border-radius: 20px;
+
+  .sponsor-text, .community-partner-text {
+    font-size: 16px;
   }
-  
-  .sponsor-text {
-    font-size: 18px; /* Text size */
-    color: white; /* Text color */
-    font-weight: 500; /* Optional boldness */
-  }
+
   .sponsor-location {
-    font-size: 16px; /* Adjust font size */
-    color: #fff; /* Ensure the text color is visible */
-    text-align: center; /* Center align the text */
-    font-style: italic; /* Italicize the text */
-    margin-top: 5px; /* Add spacing between the lines */
-    padding: 5px 0; /* Add padding for better spacing */
-    margin-top: 10px !important;
-     
+    font-size: 14px;
   }
+
+  .partner-heading {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+}
