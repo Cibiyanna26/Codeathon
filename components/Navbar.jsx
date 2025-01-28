@@ -6,6 +6,7 @@ import React from 'react';
 
 function Navbar() {
   const [status, setStatus] = React.useState(false);
+
   const handleNavClick = () => {
     setStatus(!status);
   };
@@ -45,13 +46,14 @@ function Navbar() {
 
       {/* Desktop Navigation */}
       <div
+        className="NavBar-desc"
         style={{
           display: 'flex',
           gap: '15px',
           alignItems: 'center',
         }}
       >
-        {['home', 'about', 'prize', 'faq', 'sponser'].map((item) => (
+        {['home', 'about', 'prize', 'faq', 'sponsor'].map((item) => (
           <Link
             key={item}
             style={{
@@ -94,6 +96,7 @@ function Navbar() {
       {/* Mobile Navigation Toggle */}
       <button
         onClick={handleNavClick}
+        className="menuButton"
         style={{
           display: 'none', // Default hidden for desktop
           background: 'none',
@@ -107,6 +110,7 @@ function Navbar() {
       {/* Mobile Menu */}
       {status && (
         <div
+          className="NavBar-description"
           style={{
             position: 'absolute',
             top: '60px',
@@ -133,7 +137,7 @@ function Navbar() {
           >
             ✕
           </button>
-          {['home', 'about', 'prize', 'faq', 'sponser'].map((item) => (
+          {['home', 'about', 'prize', 'faq', 'sponsor'].map((item) => (
             <Link
               key={item}
               style={{
