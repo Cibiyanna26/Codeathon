@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import React from 'react';
 
+
 function Navbar() {
   const [status, setStatus] = React.useState(false);
 
