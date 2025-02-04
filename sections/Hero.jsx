@@ -103,7 +103,7 @@ function Hero() {
             }}
           >
             <a
-              href="/result-phase-1"
+              href="https://docs.google.com/spreadsheets/d/1I16tsocCksPMUi396xXEHgXWFD0L3oRdOAdOmzFx_zM/edit?usp=sharing"
               target="_blank"
               style={{ textDecoration: 'none', color: 'white' }}
               className=' font-bold'
