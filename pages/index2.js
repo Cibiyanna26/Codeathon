@@ -8,6 +8,7 @@ import {
   Insights,
   WhatsNew,
   World,
+  Judges, // ✅ Import Judges
 } from '../sections';
 
 function Page() {
@@ -26,6 +27,7 @@ function Page() {
         <WhatsNew />
       </div>
       <World />
+      <Judges /> {/* ✅ Add the Judges section here */}
       <div className="relative">
         <Insights />
         <div className="gradient-04" />

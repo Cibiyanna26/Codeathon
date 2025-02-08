@@ -6,6 +6,7 @@ import WhatsNew from './WhatsNew';
 import World from './World';
 import Insights from './Insights';
 import Feedback from './Feedback';
+import Judges from './Judges'; // ✅ Import the new Judges section
 
 export {
   Hero,
@@ -16,4 +17,5 @@ export {
   World,
   Insights,
   Feedback,
+  Judges, // ✅ Export it here
 };
