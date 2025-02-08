@@ -73,7 +73,7 @@ function Navbar() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           style={{
-            backgroundColor: "#008CBA",
+            backgroundColor: "#00A6FB",
             padding: "10px 20px",
             color: "white",
             borderRadius: "4px",

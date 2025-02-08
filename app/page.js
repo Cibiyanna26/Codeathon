@@ -9,6 +9,7 @@ import {
   Insights,
   WhatsNew,
   World,
+  Judges, // ✅ Import Judges
 } from '../sections';
 import './page.css';
 
@@ -31,6 +32,7 @@ function Page() {
         <div className="gradient-10" />
       </div>
       <World />
+      <Judges /> {/* ✅ Add Judges Section Here */}
       <div className="relative">
         <Insights />
         <div className="gradient-04" />

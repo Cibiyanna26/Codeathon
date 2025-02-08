@@ -83,7 +83,7 @@ function Hero() {
             className="Btn font-normal"
             type="button"
             style={{
-              backgroundColor: '#4CAF50',
+              backgroundColor: '#00A6FB',
               padding: '12px 24px',
               color: 'white',
               borderRadius: '4px',
@@ -93,14 +93,25 @@ function Hero() {
               pointerEvents: isImageVisible ? 'auto' : 'none',
               transition: 'opacity 0.3s ease',
             }}
+            animate={{
+              scale: [1, 1.1, 1], // Slightly enlarges and shrinks back
+            }}
+            transition={{
+              repeat: Infinity, // Infinite loop
+              duration: 1, // Animation duration
+              ease: 'easeInOut', // Smooth transition
+            }}
           >
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSchw2TJX7HNnYJlGXx13jlzk9KjDT6NBYXz1gL0PMcQDjBy8g/viewform"target="_blank"
+              href="https://drive.google.com/file/d/1GOoZTbH_ETfBY3oDNzF5PerPKI032lP1/view?usp=sharing"
+              target="_blank"
               style={{ textDecoration: 'none', color: 'white' }}
+              className=' font-bold'
             >
-              Apply
+              Result of Phase I
             </a>
           </motion.button>
+
 
           {/* Download Button */}
           
