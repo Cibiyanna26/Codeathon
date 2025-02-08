@@ -64,14 +64,7 @@ function Judges() {
     linkedin: "https://www.linkedin.com/in/sudarssan-n-a7aaa91bb/", 
     email: "mailto:sudarssan73@gmail.com"
   },
-  {  
-    name: "Sivaperumal Muthukrishnan", 
-    position: "Solution Architect", 
-    company: "Wipro Ltd, Canada", 
-    image: "/Kim_Jury-modified.png", 
-    // linkedin: "https://www.linkedin.com/in/sudarssan-n-a7aaa91bb/", 
-    email: "mailto:Smsperumal@gmail.com"
-  },
+  
   {  
     name: "Trishiraj M", 
     position: "Professional Android Engineer", 
