@@ -78,6 +78,12 @@ function Hero() {
             gap: '30px', // Space between buttons
           }}
         >
+          <a
+              href="https://drive.google.com/file/d/1WoiAKrEKfZDUHibh8S8fIj1-jRJW8vO1/view?usp=drive_link"
+              target="_blank"
+              style={{ textDecoration: 'none', color: 'white' }}
+              className=' font-bold'
+            >
           {/* Apply Button */}
           <motion.button
             className="Btn font-normal"
@@ -102,15 +108,9 @@ function Hero() {
               ease: 'easeInOut', // Smooth transition
             }}
           >
-            <a
-              href="https://drive.google.com/file/d/1GOoZTbH_ETfBY3oDNzF5PerPKI032lP1/view?usp=sharing"
-              target="_blank"
-              style={{ textDecoration: 'none', color: 'white' }}
-              className=' font-bold'
-            >
-              Result of Phase I
-            </a>
+              Result of Phase II
           </motion.button>
+            </a>
 
 
           {/* Download Button */}
